@@ -25,6 +25,7 @@ def register_teacher(request):
         country = request.POST.get('country')
         password=request.POST.get('password')
         experience = request.POST.get('exp')
+        # if name textbox has no data
         if name == "" or name == None:
             context={
                 'message': 'Name Field Cannot be Empty'
@@ -108,6 +109,8 @@ def register_student(request):
         else:
             users_email = Student.objects.filter(email = email)
             users_phone = Student.objects.filter(phone = phone)
+
+            #if email or mobile number already taken
             if users_email.count() > 0:
                 context = {
                     'message' : 'Email Already Exists'
@@ -179,6 +182,7 @@ def login_teacher(request):
             }
             return render(request,'loginTeacher.html',context)
         else:
+            # to check whether the username is email or phone number
             if '@' in username:
                 kwargs = {
                     'email': username,
@@ -202,6 +206,7 @@ def login_teacher(request):
     return render(request,'loginTeacher.html')
 
 def index(request):
+    # if user is not logged in
     if not request.session.get('username'):
         return redirect('/login_teacher')
     print(request.session.get('username'))
@@ -245,7 +250,7 @@ def task(request):
             
             students = Student.objects.filter(id__in = student_selected)
             # print(students)
-            #For assigned students create assignments
+            #For assigned students to task
             for student in students:                
                 print(student)
                 assignment = student
