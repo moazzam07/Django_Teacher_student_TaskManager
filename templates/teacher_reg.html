@@ -1,0 +1,121 @@
+<!-- Header starts -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&family=Red+Hat+Display&family=Signika+Negative&display=swap" rel="stylesheet">
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/15e4344681.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>SignUp</title>
+</head>
+
+<body>
+    <nav id="postoblog-logo" class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" id="toogle-button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <a id="logo" class="navbar-brand" href="/">Assignment</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul id="link" class="nav navbar-nav navbar-right">
+                    <li class="nav-item link1"><a>
+                        <div class="dropdown">
+                            Sign In
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/login_teacher">Teacher</a>
+                            <a href="/login_student">Student</a>
+                        </div>
+                    </li>
+                        <li class="nav-item link1">
+                            <div class="dropdown">
+                                <a>
+                                    Sign Up
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="/register_teacher">Teacher</a>
+                                    <a href="/register_student">Student</a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Ends -->
+    <div class="container home-body">
+        <div class="sign card">
+                    <div class="card-body">
+                        <h1 class="text-center">Sign Up</h1>
+                        {% if message %}
+                        <div class="alert alert-danger" role="alert">
+                            {{message}}
+                          </div>
+                        {% endif %}
+                        <form action="/register_teacher" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="userhandle">Name</label>
+                                <input type="text" class="form-control" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Email</label>
+                                <input type="email" class="form-control" name="emailid" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Phone</label>
+                                <input type="text" class="form-control" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Country</label>
+                                <input type="text" class="form-control" name="country" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Experience</label>
+                                <input type="text" class="form-control" name="exp" required>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary">Sign Up</button>
+                        </form>
+                        <p class="text-center btn-or">OR</p>
+                        <button class="btn btn-block btn-danger"><a href="/login_teacher"> Sign In</a></button>
+                    </div>
+            </div>
+    </div>
+
+    <!-- Footer starts -->
+    <div class="footer-padding"></div>
+<div class="footer">
+    <p></p>
+</div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+    <!-- Footer Ends -->

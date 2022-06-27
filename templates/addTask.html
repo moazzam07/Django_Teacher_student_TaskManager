@@ -1,0 +1,71 @@
+<!-- Header starts -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&family=Red+Hat+Display&family=Signika+Negative&display=swap" rel="stylesheet">
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/15e4344681.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>TASK</title>
+</head>
+<html>
+<body>
+    <nav id="postoblog-logo" class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" id="toogle-button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <a id="logo" class="navbar-brand" href="/">TASK_MANAGER</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul id="link" class="nav navbar-nav navbar-right">
+                    <li class="nav-item link1"><a href="/logout">
+                            Logout
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row center">
+            <div class="col-md-6 offset-md-3">
+                <h2>Create New TASK</h2>
+                {% if message %}
+                        <div class="alert alert-danger" role="alert">
+                            {{message}}
+                          </div>
+                {% endif %}
+                <form action="/task" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group has-warning">
+						<label class="control-label" for="taskName" style="color:black;">Name</label>
+						<input type="text" class="form-control" id="name" name="name">
+						<label class="control-label" for="focusedInput" style="color:black;">Description</label>
+						<textarea class="form-control" rows="5" id="description" name="description"></textarea>
+						<label class="control-label" for="students" style="color:black;">Students</label>
+						<select class="selectpicker form-control" id="students" data-live-search="true" name="students" multiple>
+							{% for user in std %}
+                                <option data-tokens="{{user.name}}" value={{user.id}}>{{user.name}}</option>
+							{% endfor %}
+						</select>
+					</div>
+                    <button type="submit" class="btn btn-block btn-primary">Add TASK</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

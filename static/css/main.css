@@ -1,0 +1,321 @@
+html {
+    height: 100%;
+  }
+  body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-family: "Public Sans", sans-serif;
+  }
+
+  .dropdown {
+    position: sticky;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .home-body-bg {
+    background-repeat: no-repeat;
+    background-size: 900px;
+    background-attachment: fixed;
+    background-position: bottom;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  h1,
+  h2 {
+    font-family: "Signika Negative", sans-serif;
+  }
+  
+  /*---------Header------------*/
+  
+  #postoblog-logo {
+    border-radius: 0px;
+    background: black;
+    padding: 10px;
+    font-size: 17px;
+    margin-bottom: 0px;
+  }
+  
+  /* logo or main heading */
+  #logo {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  
+  /* navigation links*/
+  #link a {
+    color: #fff;
+    margin: 0 20px 0 10px;
+    letter-spacing: 1.5px;
+  }
+  
+  .link1 > a:hover {
+    font-weight: 600;
+  }
+  
+  .dropdown-menu .dropdown-item > a:hover {
+    background-image: none;
+    background-color: #185adb !important;
+  }
+  
+  /* navigation link with right border */
+  #first-link {
+    padding-right: 6px;
+    border-right: solid 1px #ccc;
+  }
+  
+  /* sign up link button and toggle button */
+  #button-link,
+  #toogle-button {
+    color: #f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+    border-radius: 25px;
+    background-color: #0039aa;
+    line-height: 17px;
+  }
+  
+  #button-link a {
+    color: #f2f2f2;
+  }
+  
+  #button-link:hover {
+    border-radius: 30px;
+    background-color: #185adb;
+  }
+  
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
+  .profile {
+    padding-right: 0px;
+    border-right: solid 1px #ccc;
+  }
+  
+  .d-inline {
+    display: inline;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+  }
+  
+  /*-----------Intro Heading----------*/
+  #intro-content {
+    text-align: center;
+  }
+  #intro-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  #intro-content h4 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  #postoblog,
+  #intro-content a,
+  #intro-content a:hover,
+  .post-title:hover,
+  .liked,
+  .my-name {
+    color: #185adb;
+  }
+  
+  /*-------------Body-------------*/
+  .post-box {
+    padding: 2%;
+    margin: 4rem 8rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .post-para {
+    font-size: 2rem;
+  }
+  .post-title {
+    color: black;
+    font-size: 3rem;
+  }
+  ard-body {
+    padding: 0 4rem;
+  }
+  .card-subtitle a {
+    color: #185adb;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .rm-btn {
+    display: block;
+    width: fit-content;
+    -webkit-border-radius: 9;
+    -moz-border-radius: 9;
+    border-radius: 9px;
+    -webkit-box-shadow: 2px 3px 6px #a6a6a6;
+    -moz-box-shadow: 2px 3px 6px #a6a6a6;
+    box-shadow: 2px 3px 6px #a6a6a6;
+    color: #ffffff;
+    font-size: 14px;
+    background: #185adb;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid transparent;
+  }
+  
+  .rm-btn:hover {
+    color: #185adb;
+    background-color: #fff;
+    border: 2px solid #185adb;
+  }
+  
+  .icon-large {
+    font-size: 20px;
+  }
+  
+  .like-btn {
+    margin-top: 1%;
+  }
+  
+  .post-content {
+    font-size: 16px;
+  }
+  
+  .btn-danger > a {
+    color: white;
+  }
+  
+  .btn-or {
+    margin: 5px;
+  }
+  
+  .btn-primary,
+  .dropdown-menu {
+    background-color: #185adb;
+  }
+  
+  .btn-primary:hover {
+    background-color: #023aaa;
+  }
+  
+  .home-body {
+    min-height: 100%;
+  }
+  
+  label {
+    font-weight: 600;
+  }
+  
+  .sign{
+    max-width: 500px;
+    margin: 80px auto auto auto;
+  }
+  
+  /*---------Footer---------*/
+  .footer {
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background-color: #185adb;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+  }
+  
+  .my-2 {
+    margin-top: 2%;
+  }
+  /* temp */
+  
+
+  /* temp */
+
+  
+  @media (max-height: 725px) {
+    .home-body-bg {
+      background-size: 800px;
+    }
+  }
+  
+  @media (max-height: 640px) {
+    .home-body-bg {
+      background-size: 500px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .post-box {
+      width: 100%;
+      margin: 2% auto;
+    }
+  
+    #intro-content h1 {
+      font-size: 3rem;
+    }
+  
+    .post-para,
+    #intro-content h4 {
+      font-size: 1.5rem;
+    }
+    .post-title {
+      font-size: 2rem;
+    }
+    .card-body {
+      padding: 0 4rem;
+    }
+    .card-subtitle a {
+      font-size: 12px;
+    }
+    .rm-btn {
+      padding: 5px 10px;
+      border: 2px solid transparent;
+    }
+  }
+  
+  @media (max-width:408px){
+    #postoblog{
+      display: block;
+      text-align: center;
+    }
+  }
