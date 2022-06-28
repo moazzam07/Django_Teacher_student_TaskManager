@@ -29,9 +29,34 @@ Django Taskmanager is a full featured Task Managing app. You can register in thi
 
 <h2>Project snapshot</h2>
 
-<h4>Register Page</h4>
+<h4>Register Teacher Page</h4>
 <div>
-<img src="https://github.com/khanjasir90/Poll-App-Django/blob/main/screenshot/signup.JPG" width = 80% height= 70%><br>
+<img src="https://github.com/moazzam07/Django_Teacher_student_TaskManager/blob/main/screenshots/register_teacher.png" width = 80% height= 70%><br>
+</div><br>
+
+<h4>Register Student Page</h4>
+<div>
+<img src="https://github.com/moazzam07/Django_Teacher_student_TaskManager/blob/main/screenshots/register_student.png" width = 80% height= 70%><br>
+</div><br>
+
+<h4>Login Page</h4>
+<div>
+<img src="https://github.com/moazzam07/Django_Teacher_student_TaskManager/blob/main/screenshots/login.png" width = 80% height= 70%><br>
+</div><br>
+
+<h4>Teacher Page</h4>
+<div>
+<img src="https://github.com/moazzam07/Django_Teacher_student_TaskManager/blob/main/screenshots/teacherDashboard.png" width = 80% height= 70%><br>
+</div><br>
+
+<h4>Task Creation Page</h4>
+<div>
+<img src="https://github.com/moazzam07/Django_Teacher_student_TaskManager/blob/main/screenshots/task_creation.png" width = 80% height= 70%><br>
+</div><br>
+
+<h4>Student Dashboard Page</h4>
+<div>
+<img src="https://github.com/moazzam07/Django_Teacher_student_TaskManager/blob/main/screenshots/studentDashBoard.png" width = 80% height= 70%><br>
 </div><br>
 
 <h2>Author</h2>
