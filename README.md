@@ -27,6 +27,13 @@ Django Taskmanager is a full featured Task Managing app. You can register in thi
 
 <p>Then go to http://127.0.0.1:8000 in your browser</p>
 
+<h2>Project snapshot</h2>
+
+<!-- <h4>Register Page</h4>
+<div>
+<img src="https://github.com/khanjasir90/Poll-App-Django/blob/main/screenshot/signup.JPG" width = 80% height= 70%><br>
+</div><br> -->
+
 <h2>Author</h2>
 <blockquote>
   Khan Mohammed Moazzam<br>
